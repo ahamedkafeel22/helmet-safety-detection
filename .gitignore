@@ -1,0 +1,8 @@
+__pycache__/ 
+*.pt 
+training_results/ 
+training_results.zip 
+Hard-Hat-Workers-1/ 
+runs/ 
+output/ 
+*.zip 

@@ -1,0 +1,8 @@
+ultralytics==8.4.19  ultralytics==8.4.19 
+fastapi 
+uvicorn 
+opencv-python 
+pandas 
+matplotlib 
+python-multipart 
+roboflow 
