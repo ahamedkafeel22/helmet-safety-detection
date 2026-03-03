@@ -1,0 +1,121 @@
+{
+  "status": "SAFE",
+  "compliance_%": 100,
+  "helmet_count": 11,
+  "violations": 0,
+  "person_count": 0,
+  "total_detections": 11,
+  "detections": [
+    {
+      "class": "helmet",
+      "confidence": 0.866,
+      "bbox": [
+        366,
+        74,
+        399,
+        118
+      ]
+    },
+    {
+      "class": "helmet",
+      "confidence": 0.861,
+      "bbox": [
+        19,
+        89,
+        54,
+        130
+      ]
+    },
+    {
+      "class": "helmet",
+      "confidence": 0.837,
+      "bbox": [
+        73,
+        92,
+        98,
+        126
+      ]
+    },
+    {
+      "class": "helmet",
+      "confidence": 0.835,
+      "bbox": [
+        107,
+        78,
+        138,
+        119
+      ]
+    },
+    {
+      "class": "helmet",
+      "confidence": 0.834,
+      "bbox": [
+        281,
+        86,
+        308,
+        123
+      ]
+    },
+    {
+      "class": "helmet",
+      "confidence": 0.833,
+      "bbox": [
+        169,
+        81,
+        197,
+        120
+      ]
+    },
+    {
+      "class": "helmet",
+      "confidence": 0.819,
+      "bbox": [
+        331,
+        84,
+        353,
+        116
+      ]
+    },
+    {
+      "class": "helmet",
+      "confidence": 0.781,
+      "bbox": [
+        213,
+        104,
+        233,
+        133
+      ]
+    },
+    {
+      "class": "helmet",
+      "confidence": 0.745,
+      "bbox": [
+        266,
+        92,
+        284,
+        120
+      ]
+    },
+    {
+      "class": "helmet",
+      "confidence": 0.629,
+      "bbox": [
+        201,
+        97,
+        217,
+        121
+      ]
+    },
+    {
+      "class": "helmet",
+      "confidence": 0.549,
+      "bbox": [
+        133,
+        104,
+        149,
+        126
+      ]
+    }
+  ],
+  "timestamp": "2026-03-03 16:37:08"
+}
