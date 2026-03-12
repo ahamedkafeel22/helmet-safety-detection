@@ -18,7 +18,18 @@ The pipeline covers the full ML lifecycle: dataset acquisition, model training, 
 
 ---
 
-## 2. Problem Statement
+## 2. 🏢 Business Understanding
+
+| | |
+|---|---|
+| **Business Problem** | Construction and industrial sites are legally required to ensure all workers wear helmets at all times. Manual inspection by safety officers is unreliable (human error, fatigue, limited coverage) and cannot monitor multiple zones simultaneously — resulting in frequent safety violations and regulatory non-compliance. |
+| **Business Objective** | Train a high-accuracy computer vision model that automatically detects helmet presence/absence in site images and video frames — providing reliable, scalable, and objective safety compliance monitoring. |
+| **Business Constraint** | Model must work on real-world construction site images with variable lighting, angles, and crowd density; must achieve high precision to avoid false violation alerts that waste safety officer time; must be lightweight enough to run on edge devices or affordable cloud infrastructure. |
+| **Business Success Criteria** | Model correctly identifies helmet compliance status for all workers in a site image with ≥ 94% accuracy — producing compliance reports that safety managers can use for regulatory documentation. |
+| **ML Success Criteria** | YOLOv8 model achieves mAP50 ≥ 94% for helmet class and ≥ 90% for head (no-helmet) class on validation set of 1,413 images. |
+| **Economic Success Criteria** | Automated detection reduces safety inspection costs by 50–60%. Avoiding a single OSHA-equivalent violation fine (avg $15,000) covers the annual cost of running the system multiple times over. Insurance premium reductions for compliant sites provide additional economic benefit. |
+
+## 3. Problem Statement
 
 Manual PPE inspection at construction sites is labor-intensive, inconsistent, and unable to scale across multiple camera feeds simultaneously. The objective of this project is to automate helmet compliance detection using computer vision, enabling:
 
@@ -29,7 +40,7 @@ Manual PPE inspection at construction sites is labor-intensive, inconsistent, an
 
 ---
 
-## 3. Dataset Description
+## 4. Dataset Description
 
 | Field | Details |
 |---|---|
@@ -58,7 +69,7 @@ Manual PPE inspection at construction sites is labor-intensive, inconsistent, an
 
 ---
 
-## 4. Model Architecture
+## 5. Model Architecture
 
 The model is based on **YOLOv8n (nano)** from the Ultralytics framework — the smallest and fastest variant of the YOLOv8 family.
 
@@ -75,7 +86,7 @@ YOLOv8n was selected over larger variants (s, m, l, x) to balance inference spee
 
 ---
 
-## 5. Training Setup
+## 6. Training Setup
 
 ### Hardware
 - **Platform:** Google Colab
@@ -104,7 +115,7 @@ model.train(
 
 ---
 
-## 6. Performance Metrics
+## 7. Performance Metrics
 
 ### Validation Results (best.pt)
 
@@ -127,7 +138,7 @@ model.train(
 
 ---
 
-## 7. Deployment Architecture
+## 8. Deployment Architecture
 
 ```
 Client (image upload)
@@ -178,7 +189,7 @@ uvicorn app:app --reload
 
 ---
 
-## 8. Results & Business Impact
+## 9. Results & Business Impact
 
 ### Batch Detection — 706 Test Images
 
@@ -209,7 +220,7 @@ A CSV report (`safety_report.csv`) is generated containing per-image metrics, ti
 
 ---
 
-## 9. Limitations
+## 10. Limitations
 
 - **Person class underperforms** due to severe class imbalance in training data; full-body person detection is unreliable
 - **Context-unaware detection** — the model flags heads in office/meeting room settings as violations even where helmets are not required
@@ -220,7 +231,7 @@ A CSV report (`safety_report.csv`) is generated containing per-image metrics, ti
 
 ---
 
-## 10. Future Work
+## 11. Future Work
 
 - Implement video stream inference using OpenCV `VideoCapture` for real-time CCTV monitoring
 - Retrain with additional `person` class annotations to improve full-body detection
