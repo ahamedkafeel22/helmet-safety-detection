@@ -18,7 +18,7 @@ The pipeline covers the full ML lifecycle: dataset acquisition, model training, 
 
 ---
 
-## 2. 🏢 Business Understanding
+## 2. Business Understanding
 
 | | |
 |---|---|
